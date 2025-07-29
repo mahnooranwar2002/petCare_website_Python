@@ -7,15 +7,15 @@ Roles and Responsibilities
 
    
 Manage pet doctor appointments
-View, add, edit, and delete user accounts
-View, add, edit, and delete pet doctor profiles
+status updated and delete user accounts
+status and delete pet Appointment
 Monitor website activity and analytics
 
 2. User
 
 
 Create an account and login to the website
-View available pet doctors and their profiles
-Make appointments with pet doctors
-View and manage their appointment history
+Make an appointments 
+View  their appointment history
+forget password
  
