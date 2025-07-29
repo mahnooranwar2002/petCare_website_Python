@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% include 'admin/index.html' %}
+    
+ <div class="container-fluid ">
+        <div class="main-content">
+            <h1>Services Management</h1>
+            <div class="card">
+                <div class="card-header">Services List</div>
+                <div class="card-body table-responsive">
+                 
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="input-group" style="flex: 1;">
+                            <input type="text" class="form-control" id="searchPassenger" placeholder="Search for passengers...">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline" type="button">Search</button>
+                            </div>
+                        </div>
+                            <button class="btn btn1  ml-3" data-toggle="modal" data-target="#addPassengerModal">Add Service</button>
+                    </div>
+    
+                    <table class="table table-striped "  >
+                        <thead>
+                            <tr>
+                                <th> Name</th>
+                                <th >Price</th>
+                                <th >Description</th>
+                             
+
+                                              <th >action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                  
+{% for service in service %}
+  <tr>
+    
+    <td>{{ service.s_name }}</td>
+    <td>{{ service.price }}</td>
+    <td>{{ service.description }}</td>
+
+     <td>
+        <a href="/serviceDel/{{service.id}}" class="btn btn-danger">delete</a>
+            <a href="/serivces_Data/{{service.id}}" class="btn btn-primary">Update</a>
+    </td>
+  </tr>
+{% endfor %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="modal fade" id="addPassengerModal" tabindex="-1" aria-labelledby="addPassengerModalLabel" aria-hidden="true">
+<div class="modal-dialog">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="addPassengerModalLabel">Add New Services</h5>
+            
+        </div>
+        <div class="modal-body">
+            <form action="/serviceInsert" method="post">
+           
+                <div class="form-group">
+                    <label for="name"> ServiceName</label>
+                    <input type="text" class="form-control" name="serviceName" placeholder="Enter Name" id="name"required >
+                </div>
+                <div class="form-group">
+                    <label for="name">Price</label>
+                    <input type="text" class="form-control"  name="S_price" required id="name" placeholder="Enter Price">
+                </div>
+                <div class="form-group">
+                    <label for="name">Descripton</label>
+                    
+                    <textarea  id="" class="form-control" name="S_des"></textarea>
+                </div>
+              
+                <button type="submit" class="btn btn1 btn-block w-100">Add Service</button>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+</body>
+</html>

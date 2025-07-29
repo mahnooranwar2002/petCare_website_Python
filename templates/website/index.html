@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Pet care </title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+
+<body>
+
+    {% include 'website/nav.html' %}
+    <!-- bannar start -->
+    <section id="bannar">
+        <div class="container" id="bannarSec">
+            <div class="right-wrapper">
+                <h3>We Care</h3>
+                <h4>Your Pets</h4>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas, modi?</p>
+                <a href="" class="btn">Contact us</a>
+
+            </div>
+            <div class="left-wrapper">
+                <img src="../../static/image/dog.png" alt="">
+            </div>
+        </div>
+        <div class="container" id="BannarSection">
+                <div class="box">
+                    <div class="right-wrapper">
+                        <h2>Introducing Petivity At-Home Health Tests for Pets</h2>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quasi veniam excepturi commodi, perspiciatis magnam dolorum ea explicabo ut. </p>
+                         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis quasi veniam excepturi commodi, perspiciatis magnam dolorum ea explicabo ut. </p>
+                       
+                        <a href="" class="btn">Get Appointment</a>
+
+                    </div>
+                      <div class="left-wrapper"><img src="../../static/image/cZsyUQyCFsQICLYkeMtlhHx7GBrhiI3NL3oUbOHffidVSPozTArRzn0XBUQ7AGTX_lBwtTWQ4DONamGXsU4PA7G_N1U4RmLVra2CVf2L5bQsWs3O0JlIbWqrsEkhTl6npbjqRf-4o4kL5bYGzAfDdls1pZARIXAmePyn9rRNL3ERCSHTXtMG0Bua.webp" alt=""></div>
+                </div>
+        </div>
+    </section>
+    <!-- bannar End -->
+     <!-- service start -->
+    <section class="serviceSec">
+        <div class="container">
+            <div class="heading ">
+                <h4>Services for every dog</h4>
+                <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam doloribus sapiente maxime
+                    eos voluptate, magnam error debitis quo quasi dolorem est nulla architecto porro deserunt ab eum
+                    cupiditate beatae. Eius.</p>
+            </div>
+            <div class="row">
+                <div class="card">
+                 <i class="fa-solid fa-shield-cat"></i>
+                    <h5>Pet Boarding</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt id qui similique atque fugit
+                        impedit assumenda quam recusandae modi earum.</p>
+                </div>
+                
+                <div class="card" id="cardsec">
+                    <i class="ri-bowl-line"></i>
+                    <h5>Healthy Meals</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt id qui similique atque fugit
+                        impedit assumenda quam recusandae modi earum.</p>
+                </div>
+                <div class="card"><i class="fa-solid fa-bath"></i>
+                    <h5>Pet Spa</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt id qui similique atque fugit
+                        impedit assumenda quam recusandae modi earum.</p>
+                </div>
+  <div class="card" id="cardsec">
+    <i class="fa-solid fa-virus"></i>
+                    <h5>Health aur Wellness</h5>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt id qui similique atque fugit
+                        impedit assumenda quam recusandae modi earum.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- service end -->
+    <!-- about us section -->
+     <section id="aboutBox">
+    <div class="container" id="aboutSec">
+        <div class="right-wrapper">
+            <img src="../../static/image/bannar.png" alt="">
+        </div>
+        <div class="left-wrapper">
+            <h3>We care your pet</h3>
+            <h4>As you care</h4>
+            <p>Lorem ipsum dolor sit , consectetur adipiscing elit, sed do
+                iusmod tempor incididunt ut labore et dolore magna aliqua.
+                Quis ipsum suspendisse ultrices gravida. Risus commodo
+                viverra maecenas accumsan.</p>
+            <a href="" class="btn">About us</a>
+        </div>
+    </div>
+    </section>
+    <!-- about us section end -->
+     <!-- adoptSec Start -->
+    <div class="container" id="AdoptSec">
+        <div class="right-wrapper">
+            <h4>We need your help Adopt Us</h4>
+            <p>Lorem ipsum dolor sit , consectetur adipiscing elit, sed do
+                iusmod tempor incididunt ut labore et dolore magna aliqua.
+                Quis ipsum suspendisse ultrices gravida. Risus commodo
+                viverra maecenas accumsan.</p>
+            <a href="" class="btn">contact us</a>
+
+        </div>
+        <div class="left-wrapper">
+            <div class="col">
+                <div class="cardbox">
+                    <h4>52+</h4>
+                    <h6>Pets Available</h6>
+                </div>
+            </div>
+            <div class="row">
+                <div class="card">
+                    <h4>452
+Pets Available</h4>
+                </div>
+                <div class="card">
+                    <h4>52+
+Pets Available</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- adoptSec end -->
+ 
+   <section class="contactSec">
+    <div class="overlay">
+    <div class="container" >
+        <h3>Why go with Us?</h3>
+        <h3>
+       Petivity was created to help you know your pet better. Our products provide you valuable insights so you can care for your pets with confidence — because they deserve nothing less.
+</h3>
+       
+    </div>
+    </div>
+   </section>
+ <div class="container" id="contactSec">
+        <div class="right-wrapper">
+            <h2>Get Touch us</h2>
+          <form action="/Addcontact" method="post">
+                <div class="row"><input type="text" class="input" name="name" placeholder="Name">
+                    <input placeholder="Email" type="text" class="input"  name="email"></div>
+                <div class="row"><input type="text" class="input sub" placeholder="subject" name="sub"></div>
+                <div class="row">
+                  
+                    <textarea class="input sub c" id="" name="msg" placeholder="write a massage"></textarea>
+                </div>
+                <input type="submit"  class="btn" value="Send">
+            </form>
+        </div>
+        <div class="left-wrapper">
+            <ul>
+                <li>
+                    <div class="icon">
+                        <i class="ri-home-8-line"></i>
+                    </div>
+                    <div class="content">
+                        <p class="p">Buttonwood, California.</p>
+                        <p>Rosemead, CA 91770</p>
+                    </div>
+                </li>
+                  <li>
+                    <div class="icon">
+                  <i class="ri-smartphone-fill"></i>
+                    </div>
+                    <div class="content">
+                        <p class="p">033 50312 358</p>
+                        <p>Mon to Fri 9am to 6pm</p>
+                    </div>
+                </li>
+                    <li>
+                    <div class="icon">
+                  <i class="ri-mail-ai-line"></i>
+                    </div>
+                    <div class="content">
+                        <p class="p">mahmnooranwar191@gmail.com</p>
+                        <p>Send us your query anytime!</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+   {% include 'website/footer.html' %}
+   
+</body>
+
+</html>

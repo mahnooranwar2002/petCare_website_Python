@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% include 'website/nav.html' %}
+    <div class="aboutsec">
+        <div id="heading">
+            <div class="container">
+                <h2>Contact us</h2>
+                <p>Far far away, behind the word mountains, far from the countries vokalia.</p>
+            </div>
+        </div>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#EFFAFD" fill-opacity="0.8"
+                d="M0,96L30,96C60,96,120,96,180,133.3C240,171,300,245,360,234.7C420,224,480,128,540,117.3C600,107,660,181,720,202.7C780,224,840,192,900,154.7C960,117,1020,75,1080,96C1140,117,1200,203,1260,229.3C1320,256,1380,224,1410,208L1440,192L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
+            </path>
+        </svg> -->
+    </div>
+    <div class="container" id="contactSec">
+        <div class="right-wrapper">
+            <h2>Get Touch us</h2>
+            <form action="/Addcontact" method="post">
+                <div class="row">
+                    <input type="text" class="input" name="name" placeholder="Name">
+                    <input placeholder="Email" type="text" class="input"  name="email"></div>
+                <div class="row"><input type="text" class="input sub" placeholder="subject" name="sub"></div>
+                <div class="row">
+                  
+                    <textarea class="input sub c" id="" name="msg" placeholder="write a massage"></textarea>
+                </div>
+                <input type="submit"  class="btn" value="Send">
+            </form>
+        </div>
+        <div class="left-wrapper">
+            <ul>
+                <li>
+                    <div class="icon">
+                        <i class="ri-home-8-line"></i>
+                    </div>
+                    <div class="content">
+                        <p class="p">Buttonwood, California.</p>
+                        <p>Rosemead, CA 91770</p>
+                    </div>
+                </li>
+                  <li>
+                    <div class="icon">
+                  <i class="ri-smartphone-fill"></i>
+                    </div>
+                    <div class="content">
+                        <p class="p">033 50312 358</p>
+                        <p>Mon to Fri 9am to 6pm</p>
+                    </div>
+                </li>
+                    <li>
+                    <div class="icon">
+                  <i class="ri-mail-ai-line"></i>
+                    </div>
+                    <div class="content">
+                        <p class="p">mahmnooranwar191@gmail.com</p>
+                        <p>Send us your query anytime!</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    {% include 'website/footer.html' %}
+</body>
+
+</html>

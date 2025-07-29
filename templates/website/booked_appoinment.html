@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% include 'website/nav.html' %}
+    <div class="aboutsec">
+        <div id="heading">
+            <div class="container">
+                <h2>Appointment Views</h2>
+                <p>Far far away, behind the word mountains, far from the countries vokalia.</p>
+            </div>
+        </div>
+       
+    </div>
+<div class="container" id="appointtmentSec">
+   
+    <table id="customers">
+  <tr>
+    <th>Date</th>
+            <th>Time</th>
+            <th>Service Name</th>
+            <th>Massage</th>
+            
+            <th>Status</th>
+  </tr>
+{% if appointment|length == 0 %}
+    <tr><td colspan="5" style="text-align: center;">You did not book any appointment yet</td></tr>
+{% else %}
+    {% for appo in appointment %}
+        <tr>
+          
+            <td>{{ appo['app_date'] }}</td>
+            <td>{{ appo['app_time'] }}</td>
+              <td>{{ appo.service_name }}</td>
+            <td>{{ appo['msg'] }}</td>
+            <td>{{ appo['status'] }}</td>
+            
+        </tr>
+    {% endfor %}
+{% endif %}
+
+  
+</table>
+
+</div>
+    {% include 'website/footer.html' %}
+</body>
+
+</html>

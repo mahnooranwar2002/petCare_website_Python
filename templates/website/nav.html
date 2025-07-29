@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>mm</title>
+  <link rel="stylesheet" href="../../static/css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  
+  <header>
+    <section class="ourinfo">
+      <div class="container" id="infoSec">
+        <div class="col">
+        <i class="ri-instagram-fill"></i>
+         <i class="ri-instagram-fill"></i>
+          <i class="ri-instagram-fill"></i>
+          </div>
+          <div class="col"><span>78/A, Green lane NYC +10 (78) 367 3674</span></div>
+      </div>
+    </section>
+    <div className="container" id="navbar">
+
+      <h2>Pet <span>Care</span></h2>
+      <!-- <p>Welcome, {{ user['name'] }}!</p> -->
+
+      <nav>
+        <ul>
+          <li>
+
+
+            <a href="/">Home</a>
+          </li>
+          <li>
+
+            <a href="/about">About</a>
+          </li>
+          <li>
+
+            <a href="/appointment">Appointment</a>
+          </li>
+          <li>
+            <a href="/contact">Contact</a>
+          </li>
+
+        </ul>
+      </nav>
+     {% if not user %}
+     <div className="startedLink">
+
+        <a href="/login" class="btn">Get Start</a>
+      </div>
+    
+{% else %}
+      
+      <div class="dropdown">
+  <button class="dropbtn">{{ user['name'] }}</button>
+  <div class="dropdown-content">
+  <a href="/profile">Profile</a>
+  <a href="/appointmentbooked">View Appointments</a>
+  <a href="/logout">Logout</a>
+  </div>
+</div>
+{% endif %}
+  
+      <i class="ri-menu-unfold-4-line menu" id="icon" onclick="Navmenu()"></i>
+    </div>
+  </header>
+  
+
+</body>
+
+</html>

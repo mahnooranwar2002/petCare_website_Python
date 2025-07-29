@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+         {% include 'admin/index.html' %}
+            <div class="container-fluid">
+        <div class="main-content">
+            <h1>Dashboard</h1>
+            <div class="row">
+                <!-- <div class="col-md-3">
+                    <div class="card card-count">
+                        <div class="card-body">
+                            <div class="count">150</div>
+                            <div class="icon"><i class="fas fa-user"></i></div>
+                        </div>
+                        <div class="card-footer">
+                            Total Passengers
+                        </div>
+                    </div>
+                </div> -->
+                <div class="col-md-4">
+                    <div class="card card-count">
+                        <div class="card-body">
+                            <div class="count"> {{admin | length}}</div>
+                            <div class="icon"><i class="ri-user-settings-fill"></i></div>
+                        </div>
+                        <div class="card-footer">
+                            Admin 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-count">
+                        <div class="card-body">
+                            <div class="count">{{web_user | length}}</div>
+                            <div class="icon"><i class="ri-group-line"></i></div>
+                        </div>
+                        <div class="card-footer">
+                            Users
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-count">
+                        <div class="card-body">
+                            <div class="count">{{service | length}}</div>
+                            <div class="icon"><i class="ri-layout-grid-fill"></i></div>
+                        </div>
+                        <div class="card-footer">
+                            Services
+                        </div>
+                    </div>
+                </div>
+            </div>
+         <div class="row">
+                
+                <div class="col-md-4">
+                    <div class="card card-count">
+                        <div class="card-body">
+                            <div class="count">{{app | length}}</div>
+                            <div class="icon"><i class="ri-calendar-schedule-fill"></i></div>
+                        </div>
+                        <div class="card-footer">
+                           Appointments
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-count">
+                        <div class="card-body">
+                            <div class="count">45</div>
+                            <div class="icon"><i class="fas fa-ticket-alt"></i></div>
+                        </div>
+                        <div class="card-footer">
+                            Bookings Today
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card card-count">
+                        <div class="card-body">
+                            <div class="count">{{cont | length}}</div>
+                            <div class="icon"><i class="ri-phone-fill"></i></div>
+                        </div>
+                        <div class="card-footer">
+                          Contact
+                        </div>
+                    </div>
+                </div>
+            </div>
+         
+            
+            
+        </div>
+    </div>
+</body>
+</html>

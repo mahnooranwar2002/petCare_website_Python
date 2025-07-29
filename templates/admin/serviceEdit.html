@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+      {% include 'admin/index.html' %}
+      <div class="modal-dialog w-75" style="margin-left: 350px;">
+    <div class="modal-content py-5 px-4">
+        <div class="modal-header p-4 rounded-4">
+            <h5 class="modal-title" id="addPassengerModalLabel">Update Services</h5>
+            
+        </div>
+        <div class="modal-body">
+            <form action="/serviceUpdate/{{service.id}}" method="post">
+           
+                <div class="form-group">
+                    <label for="name"> ServiceName</label>
+                    <input type="text" class="form-control" name="serviceName" value="{{service.s_name}}" id="name"required >
+                </div>
+                <div class="form-group">
+                    <label for="name">Price</label>
+                    <input type="text" class="form-control"  name="S_price"  value="{{service.price}}" required id="name" placeholder="Enter Price">
+                </div>
+                <div class="form-group">
+                    <label for="name">Descripton</label>
+                    
+                    <textarea  id="" class="form-control" name="S_des">{{service.description}}</textarea>
+                </div>
+              
+                <button type="submit" class="btn btn1 btn-block w-100">Update Service</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

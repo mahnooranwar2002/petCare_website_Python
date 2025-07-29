@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% include 'admin/index.html' %}
+
+    <div class="container-fluid ">
+        <div class="main-content">
+            <h1>Appointment Management</h1>
+            <div class="card">
+                <div class="card-header">Appointment List</div>
+                <div class="card-body table-responsive">
+
+                    <div class="d-flex justify-content-between align-items-center mb-3">
+                        <div class="input-group" style="flex: 1;">
+                            <input type="text" class="form-control" id="searchPassenger"
+                                placeholder="Search for passengers...">
+                            <div class="input-group-append">
+                                <button class="btn btn-outline" type="button">Search</button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <table class="table table-striped ">
+                        <thead>
+                            <tr>
+                                <th> Name</th>
+                                <th>Service</th>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Status</th>
+
+                                <th>action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+
+                            {% for appointment in appointments %}
+                            <tr>
+
+                                <td>{{ appointment.user_name }}</td>
+                                <td>{{ appointment.service_name }}</td>
+
+                                <td>{{ appointment.app_date }}</td>
+                                <td>{{ appointment.app_time }}</td>
+                                <td>
+                                    <form action="/updateAppointStatus/{{appointment.id}}" method="post">
+                                        <select name="status" id="" class="form-control">
+                                            <option value="{{ appointment.status }}" hidden>{{ appointment.status }}</option>
+                                            <!-- <option value="pending">Pending</option> -->
+                                            <option value="in_progress">In Progress</option>
+                                            <option value="completed">Completed</option>
+                                            <input type="submit" value="Update" class="w-100 btn btn-success mt-1">
+                                        </select>
+                                    </form>
+                                </td>
+                                <td>
+                                    <a href="/appointDel/{{appointment.id}}" class="btn btn-danger">delete</a>
+                                    <!-- <a href="/serivces_Data/{{appointment.id}}" class="btn btn-primary">Update</a> -->
+                                </td>
+                            </tr>
+                            {% endfor %}
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

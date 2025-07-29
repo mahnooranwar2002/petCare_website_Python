@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% include 'website/nav.html' %}
+    <div class="aboutsec">
+        <div id="heading">
+            <div class="container">
+                <h2>Appointment</h2>
+                <p>Far far away, behind the word mountains, far from the countries vokalia.</p>
+            </div>
+        </div>
+        <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#EFFAFD" fill-opacity="0.8"
+                d="M0,96L30,96C60,96,120,96,180,133.3C240,171,300,245,360,234.7C420,224,480,128,540,117.3C600,107,660,181,720,202.7C780,224,840,192,900,154.7C960,117,1020,75,1080,96C1140,117,1200,203,1260,229.3C1320,256,1380,224,1410,208L1440,192L1440,0L1410,0C1380,0,1320,0,1260,0C1200,0,1140,0,1080,0C1020,0,960,0,900,0C840,0,780,0,720,0C660,0,600,0,540,0C480,0,420,0,360,0C300,0,240,0,180,0C120,0,60,0,30,0L0,0Z">
+            </path>
+        </svg> -->
+    </div>
+      <div class="container" id="appointmentSec">
+        <form action="/bookingAppointment" method="post">
+            <input type="text" name="u_name" value="{{user.name}}" placeholder="name" class="input"> 
+            <input type="hidden" name="u_id" value="{{user.id}}" placeholder="id" >
+            <input type="date" name="app_date" placeholder="date" class="date">
+            <input type="time" name="app_time" placeholder="time" class="date">
+            <select name="service" id="" class="date">
+                <option hidden>select your service</option>
+                {% for service in service %}
+                <option value="{{service.id}}">{{service.s_name}}</option>
+                {% endfor %}
+            </select>
+            <textarea name="msg" id="" class="textarea">Write a massage</textarea>
+             <input type="submit" value="make appointment" class="btn">
+            
+        </form>
+      </div>
+    {% include 'website/footer.html' %}
+</body>
+
+</html>

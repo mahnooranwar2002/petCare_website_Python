@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Airline Management System</title>
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <!-- fontawose icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <!-- boxicons  -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'> 
+    <!-- style  -->
+ <link rel="stylesheet" href="../../static/css/adminpanel.css">
+ <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- side bar  -->
+    <div class="sidebar">
+        <div class="logo-details">
+          
+            <span class="logo_name">Admin Panel</span>
+          
+        </div>
+        <ul class="nav-links">
+            <li>
+                <a href="/dashboard" class="sidebar-link">
+                <i class="ri-dashboard-fill"></i>
+                    <span class="link_name">Dashboard </span>
+                </a>
+              
+            </li>
+            <li>
+                <a href="/userDetails" class="sidebar-link">
+                  <i class="ri-group-line"></i>
+                    <span class="link_name">Users </span>
+                </a>
+              
+            </li>
+            <li>
+                <a href="/service_details" class="sidebar-link">
+                   <i class="ri-layout-grid-fill"></i>
+                    <span class="link_name">Services </span>
+                </a>
+               
+            </li>
+          <li>
+                <a href="/appoint" class="sidebar-link">
+                    <i class="ri-calendar-schedule-fill"></i>
+                    <span class="link_name">Appointments </span>
+                </a>
+               
+            </li>
+                 <li>
+                <a href="/admin/contact" class="sidebar-link">
+                   <i class="ri-phone-fill"></i>
+                    <span class="link_name">Contact </span>
+                </a>
+               
+            </li>
+        </ul>
+    </div>
+      <!-- end  -->
+       <!-- main sec  -->
+      <section class="home-section ">
+        <div class="home-content">
+          <i class='bx bx-menu'></i>
+          <span class="text">Pet Care
+          </span>
+          <div class="profile-dropdown">
+            <span class="profile-name text-white">{{user.name}}</span>
+            <i class='bx bx-chevron-down text-white'></i>
+            <div class="dropdown-content">
+               
+                <a href="/admin/profile">Profile</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </div>
+        </div>
+                 
+
+      </section>
+<!-- Modal -->
+
+
+<!-- js  -->
+    <!-- sidebar  -->
+    <script>
+         let arrow = document.querySelectorAll(".arrow");
+        for (var i = 0; i < arrow.length; i++) {
+          arrow[i].addEventListener("click", (e)=>{
+         let arrowParent = e.target.parentElement.parentElement;
+         arrowParent.classList.toggle("showMenu");
+          });
+        }
+        
+        let sidebar = document.querySelector(".sidebar");
+        let sidebarBtn = document.querySelector(".bx-menu");
+        console.log(sidebarBtn);
+        sidebarBtn.addEventListener("click", ()=>{
+          sidebar.classList.toggle("close");
+        });
+        
+    //    sweetalert 
+        function confirmDelete(passengerId) {
+        swal({
+            title: "Are you sure?",
+            text: "Once deleted, you will not be able to recover this passenger's data!",
+            icon: "warning",
+            buttons: true,
+            dangerMode: true,
+        })
+        .then((willDelete) => {
+            if (willDelete) {
+               
+                swal("Poof! Your passenger has been deleted!", {
+                    icon: "success",
+                });
+            } else {
+                swal("Your passenger is safe!");
+            }
+        });
+    }</script>
+    <!-- bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    
+</body>
+</html>
