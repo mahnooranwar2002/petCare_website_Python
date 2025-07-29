@@ -1,6 +1,8 @@
 ----------------------------------Pet Care Wesbite ------------------------------------
 
-The PET CARE website is a web application built using Python Flask that allows users to make doctor appointments for their pets. The website has two roles: Admin and User.
+The PET CARE website is a web application built using Python Flask that allows users to make Service appointments for their pets using mysql as database. 
+
+The website has two roles: Admin and User.
 
 Roles and Responsibilities
 1. Admin
