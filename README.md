@@ -7,15 +7,22 @@ Roles and Responsibilities
 
    
 Manage pet doctor appointments
+
+
 status updated and delete user accounts
+
 status and delete pet Appointment
+
 Monitor website activity and analytics
 
 2. User
 
 
 Create an account and login to the website
+
 Make an appointments 
+
 View  their appointment history
+
 forget password
  
